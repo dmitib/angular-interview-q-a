@@ -7,6 +7,12 @@ Angular 2+ interview Q/A
 		<a href="#angular-basics">Angular Basics (25 questions)</a>
 	</li>
 	<li>
+		<a href="#rxjs">RxJS (29 questions)</a>
+	</li>
+	<li>
+		<a href="#typescript">Typescript (0 questions)</a>
+	</li>
+	<li>
 		<a href="#configuration--tools">Configuration & Tools (28 questions)</a>
 	</li>
 	<li>
@@ -20,9 +26,6 @@ Angular 2+ interview Q/A
 	</li>
 	<li>
 		<a href="#pipes">Pipes (8 questions)</a>
-	</li>
-	<li>
-		<a href="#rxjs">RxJS (29 questions)</a>
 	</li>
 	<li>
 		<a href="#routing">Routing (20 questions)</a>
@@ -75,6 +78,50 @@ Angular 2+ interview Q/A
 | 23. |[What is the purpose of NgModule? How do you decide to create a new NgModule?](#q-what-is-the-purpose-of-ngmodule-how-do-you-decide-to-create-a-new-ngmodule)|
 | 24. |[What is difference between Angular Modules and JavaScript Modules?](#q-what-is-difference-between-angular-modules-and-javascript-modules)|
 | 25. |[How would you make use of ngOnInit()?](#q-how-would-you-make-use-of-ngoninit)|
+
+**[⬆ Back to Top](#main-parts)**
+
+###  Typescript
+
+<ol>
+	<li><a href="#q">Question</a></li>
+</ol>
+
+**[⬆ Back to Top](#main-parts)**
+
+###  RxJS
+
+<ol>
+	<li><a href="#q-what-is-rxjs">What is RxJS?</a></li>
+	<li><a href="#q-what-is-subscribing">What is subscribing?</a></li>
+	<li><a href="#q-what-is-an-observable">What is an observable?</a></li>
+	<li><a href="#q-what-is-an-observer">What is an observer?</a></li>
+	<li><a href="#q-what-is-multicasting">What is multicasting?</a></li>
+	<li><a href="#q-what-is-an-rxjs-operator">What is an RxJS Operator?</a></li>
+	<li><a href="#q-what-is-rxjs-subject-in-angular">What is rxjs subject in Angular?</a></li>
+	<li><a href="#q-what-are-observable-creation-functions">What are observable creation functions?</a></li>
+	<li><a href="#q-what-are-the-utility-functions-provided-by-rxjs">What are the utility functions provided by RxJS?</a></li>
+	<li><a href="#q-how-do-you-perform-error-handling-in-observables">How do you perform error handling in observables?</a></li>
+	<li><a href="#q-what-is-rxjs-behaviorsubject-replaysubject-and-asyncsubject-in-angular">What is RxJS BehaviorSubject, ReplaySubject and AsyncSubject in angular?</a></li>
+	<li><a href="#q-what-is-difference-between-behaviorsubject-and-observable">What is difference between BehaviorSubject and Observable?</a></li>
+	<li><a href="#q-what-is-the-difference-between-subject-and-behaviorsubject">What is the difference between Subject and BehaviorSubject?</a></li>
+	<li><a href="#q-how-can-you-read-full-response">How can you read full response?</a></li>
+	<li><a href="#q-how-do-you-perform-error-handling">How do you perform Error handling?</a></li>
+	<li><a href="#q-what-will-happen-if-you-do-not-supply-handler-for-observer">What will happen if you do not supply handler for observer?</a></li>
+	<li><a href="#q-what-is-the-short-hand-notation-for-subscribe-method">What is the short hand notation for subscribe method?</a></li>
+	<li><a href="#q-explain-the-difference-between-promise-and-observable-in-angular">Explain the difference between Promise and Observable in Angular?</a></li>
+	<li><a href="#q-how-to-cache-an-observable-data">How to cache an observable data?</a></li>
+	<li><a href="#q-what-are-the-best-way-to-unsubscribe-from-observables-in-angular">What are the best way to unsubscribe from Observables in Angular?</a></li>
+	<li><a href="#q-if-you-need-to-respond-to-two-different-observable-or-subject-with-one-callback-function-how-would-you-do-it">If you need to respond to two different Observable or Subject with one callback function how would you do it?</a></li>
+	<li><a href="#q-what-is-the-difference-between-an-observable-and-a-subject">What is the difference between an observable and a subject?</a></li>
+	<li><a href="#q-what-is-the-difference-between-observable-and-promises">What is the difference between observable and promises?</a></li>
+	<li><a href="#q-what-are-rxjs-lettable-operators">What are rxjs lettable operators?</a></li>
+	<li><a href="#q-how-would-you-implement-a-multiple-api-calls-that-needs-to-happen-in-order-using-rxjs">How would you implement a multiple api calls that needs to happen in order using rxjs?</a></li>
+	<li><a href="#q-what-is-the-difference-between-switchmap-concatmap-and-mergemap">What is the difference between switchMap, concatMap and mergeMap?</a></li>
+	<li><a href="#q-how-would-you-implement-a-brush-behavior-using-rxjs">How would you implement a brush behavior using rxjs?</a></li>
+	<li><a href="#q-how-would-you-implement-a-color-picker-with-rxjs">How would you implement a color picker with rxjs?</a></li>
+	<li><a href="#q-if-you-need-to-respond-to-two-different-observable-subject-with-one-callback-function-how-would-you-do-it-ex-if-you-need-to-change-the-url-through-route-parameters-and-with-prev-next-buttons">If you need to respond to two different Observable/Subject with one callback function, how would you do it?(ex: if you need to change the url through route parameters and with prev/next buttons)</a></li>
+</ol>
 
 **[⬆ Back to Top](#main-parts)**
 
@@ -212,42 +259,6 @@ Angular 2+ interview Q/A
 | 06. |[What is difference between Stateful and Stateless Pipes in angular?](#q-what-is-difference-between-stateful-and-stateless-pipes-in-angular)|
 | 07. |[How does async pipe prevents memory leaks?](#q-how-does-async-pipe-prevents-memory-leaks)|
 | 08. |[What happens if you subscribe to a data source multiple times with async pipe?](#q-what-happens-if-you-subscribe-to-a-data-source-multiple-times-with-async-pipe)|
-
-**[⬆ Back to Top](#main-parts)**
- 
-###  RxJS
-
-<ol>
-	<li><a href="#q-what-is-rxjs">What is RxJS?</a></li>
-	<li><a href="#q-what-is-subscribing">What is subscribing?</a></li>
-	<li><a href="#q-what-is-an-observable">What is an observable?</a></li>
-	<li><a href="#q-what-is-an-observer">What is an observer?</a></li>
-	<li><a href="#q-what-is-multicasting">What is multicasting?</a></li>
-	<li><a href="#q-what-is-an-rxjs-operator">What is an RxJS Operator?</a></li>
-	<li><a href="#q-what-is-rxjs-subject-in-angular">What is rxjs subject in Angular?</a></li>
-	<li><a href="#q-what-are-observable-creation-functions">What are observable creation functions?</a></li>
-	<li><a href="#q-what-are-the-utility-functions-provided-by-rxjs">What are the utility functions provided by RxJS?</a></li>
-	<li><a href="#q-how-do-you-perform-error-handling-in-observables">How do you perform error handling in observables?</a></li>
-	<li><a href="#q-what-is-rxjs-behaviorsubject-replaysubject-and-asyncsubject-in-angular">What is RxJS BehaviorSubject, ReplaySubject and AsyncSubject in angular?</a></li>
-	<li><a href="#q-what-is-difference-between-behaviorsubject-and-observable">What is difference between BehaviorSubject and Observable?</a></li>
-	<li><a href="#q-what-is-the-difference-between-subject-and-behaviorsubject">What is the difference between Subject and BehaviorSubject?</a></li>
-	<li><a href="#q-how-can-you-read-full-response">How can you read full response?</a></li>
-	<li><a href="#q-how-do-you-perform-error-handling">How do you perform Error handling?</a></li>
-	<li><a href="#q-what-will-happen-if-you-do-not-supply-handler-for-observer">What will happen if you do not supply handler for observer?</a></li>
-	<li><a href="#q-what-is-the-short-hand-notation-for-subscribe-method">What is the short hand notation for subscribe method?</a></li>
-	<li><a href="#q-explain-the-difference-between-promise-and-observable-in-angular">Explain the difference between Promise and Observable in Angular?</a></li>
-	<li><a href="#q-how-to-cache-an-observable-data">How to cache an observable data?</a></li>
-	<li><a href="#q-what-are-the-best-way-to-unsubscribe-from-observables-in-angular">What are the best way to unsubscribe from Observables in Angular?</a></li>
-	<li><a href="#q-if-you-need-to-respond-to-two-different-observable-or-subject-with-one-callback-function-how-would-you-do-it">If you need to respond to two different Observable or Subject with one callback function how would you do it?</a></li>
-	<li><a href="#q-what-is-the-difference-between-an-observable-and-a-subject">What is the difference between an observable and a subject?</a></li>
-	<li><a href="#q-what-is-the-difference-between-observable-and-promises">What is the difference between observable and promises?</a></li>
-	<li><a href="#q-what-are-rxjs-lettable-operators">What are rxjs lettable operators?</a></li>
-	<li><a href="#q-how-would-you-implement-a-multiple-api-calls-that-needs-to-happen-in-order-using-rxjs">How would you implement a multiple api calls that needs to happen in order using rxjs?</a></li>
-	<li><a href="#q-what-is-the-difference-between-switchmap-concatmap-and-mergemap">What is the difference between switchMap, concatMap and mergeMap?</a></li>
-	<li><a href="#q-how-would-you-implement-a-brush-behavior-using-rxjs">How would you implement a brush behavior using rxjs?</a></li>
-	<li><a href="#q-how-would-you-implement-a-color-picker-with-rxjs">How would you implement a color picker with rxjs?</a></li>
-	<li><a href="#q-if-you-need-to-respond-to-two-different-observable-subject-with-one-callback-function-how-would-you-do-it-ex-if-you-need-to-change-the-url-through-route-parameters-and-with-prev-next-buttons">If you need to respond to two different Observable/Subject with one callback function, how would you do it?(ex: if you need to change the url through route parameters and with prev/next buttons)</a></li>
-</ol>
 
 **[⬆ Back to Top](#main-parts)**
 
