@@ -84,7 +84,7 @@ Angular 2+ interview Q/A
 ###  Typescript
 
 <ol>
-	<li><a href="#q">Question</a></li>
+	<li><a href="#q-4-oop-principles-in-typescript">4 OOP principles in Typescript</a></li>
 </ol>
 
 **[⬆ Back to Top](#main-parts)**
@@ -6101,6 +6101,138 @@ You should omit the brackets when all of the following are true
 * The target property accepts a string value.
 * The string is a fixed value that you can put directly into the template.
 * This initial value never changes.
+
+**[⬆ Back to Top](#main-parts)**
+		
+## Q. ***4 OOP principles in Typescript***
+
+**1. Inheritance** <br>
+Это создание саб (дочерних) классов от супер (родительских) классов. При наследовании саб классы наследуют методы и переменные супер класса.
+```ts
+class Developer {
+	public isDeveloper: boolean;
+		
+	constructor(
+		public name: string,
+		public salary: number
+	) {
+		this.isDeveloper = true;	
+	}
+		
+	getInfo(): void {
+		console.log('name: ', this.name);
+		console.log('salary: ', this.salary);
+	}
+}
+		
+class SeniorDeveloper extends Developer {
+	constructor(
+		public name: string,
+		public salary: number	
+	) {
+		super(name, salary); // super вызывает родительский конструктор как функцию
+	}
+		
+	teachJuniorDevs(): void {
+		console.log(`${this.name} teaches junior devs`);	
+	}
+}
+		
+const developer = new SeniorDeveloper('Dmitrii', 5000);
+developer.teachJuniorDevs(); // 1 console log
+developer.getInfo(); // 2 console logs
+console.log(developer.isDeveloper); // true
+
+```
+		
+**2. Encapsulation** <br>
+Это защита данных от доступа в дочерних классах либо от доступа извне класса.
+
+Существуют 3 вида модификаторов доступности:
+<ul>
+	<li><b>public</b> - дает возможность обращаться к функции или проперти вне класса, так же доступен в саб классах</li>
+	<li><b>private</b> - дает возможность обращаться к функции или проперти только внутри класса где они объявлены, не доступен в саб классах</li>
+	<li><b>protected</b> - дает возможность обращаться к функции или проперти только внутри класса, доступен в саб классах</li>
+</ul>
+
+
+
+		
+**3. Polymorphism** <br>
+Это одно действие, несколько реализаций.
+
+```ts
+class Animal {
+	constructor(
+		public name: string
+	) {}
+		
+	run(): void {} // действие, без реализации
+}
+		
+class Dog extends Animal {
+	constructor(
+		public name: string
+	) {
+		super(name);	
+	}
+		
+	run() {
+		console.log("RUN DOG!");  // специфичная реализация действия для этого класса	
+	}
+}
+		
+class Lion extends Animal {
+	constructor(
+		public name: string
+	) {
+		super(name);	
+	}
+		
+	run() {
+		console.log("RUN LION!"); // специфичная реализация действия для этого класса	
+	}
+}
+```
+		
+**4. Abstraction** <br>
+Это использование только тех характеристик объекта, которые с большей точностью представляют его в данной системе.
+<br>
+Нельзя создать инстанс абструктного класса. 
+		
+```ts
+abstract class Car {
+	constructor(
+		protected owner: string,
+		protected speed: number,
+		protected year: number
+	) {}
+		
+	public drive(): void {}
+	public repair(): void {}
+}
+		
+class BMW extends Car {
+	constructor(
+		protected owner: string,
+		protected speed: number,
+		protected year: number
+	) {
+		super('BMW company', speed, year);
+	}
+		
+	drive() {
+		console.log(`The BMW car has speed: ${this.speed}`);
+	}
+		
+	repair() {
+		console.log('The BMW car was repaired');
+	}
+}
+		
+const bmwCar = new BMW(200, 2022);
+bmwCar.drive();
+```
 
 **[⬆ Back to Top](#main-parts)**
 
