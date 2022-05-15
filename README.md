@@ -4,46 +4,46 @@ Angular 2+ interview Q/A
 ### Main parts:
 <ol>
 	<li>
-		<a href="#angular-basics">Angular Basics (25 questions)</a>
+		<a href="#angular-basics">Angular Basics</a>
 	</li>
 	<li>
-		<a href="#rxjs">RxJS (29 questions)</a>
+		<a href="#rxjs">RxJS</a>
 	</li>
 	<li>
-		<a href="#typescript">Typescript (0 questions)</a>
+		<a href="#typescript">Typescript</a>
 	</li>
 	<li>
-		<a href="#configuration--tools">Configuration & Tools (28 questions)</a>
+		<a href="#configuration--tools">Configuration & Tools</a>
 	</li>
 	<li>
-		<a href="#architecture">Architecture (27 questions)</a>
+		<a href="#architecture">Architecture</a>
 	</li>
 	<li>
-		<a href="#component-interaction">Component Interaction (30 questions)</a>
+		<a href="#component-interaction">Component Interaction</a>
 	</li>
 	<li>
-		<a href="#angular-forms">Angular Forms (9 questions)</a>
+		<a href="#angular-forms">Angular Forms</a>
 	</li>
 	<li>
-		<a href="#pipes">Pipes (8 questions)</a>
+		<a href="#pipes">Pipes</a>
 	</li>
 	<li>
-		<a href="#routing">Routing (20 questions)</a>
+		<a href="#routing">Routing</a>
 	</li>
 	<li>
-		<a href="#services--di">Services & DI (18 questions)</a>
+		<a href="#services--di">Services & DI</a>
 	</li>
 	<li>
-		<a href="#angular-template">Angular Template (15 questions)</a>
+		<a href="#angular-template">Angular Template</a>
 	</li>
 	<li>
-		<a href="#angular-animations">Angular Animations (13 questions)</a>
+		<a href="#angular-animations">Angular Animations</a>
 	</li>
 	<li>
-		<a href="#performance">Performance (11 questions)</a>
+		<a href="#performance">Performance</a>
 	</li>
 	<li>
-		<a href="#miscellaneous">Miscellaneous (13 questions)</a>
+		<a href="#miscellaneous">Miscellaneous</a>
 	</li>
 </ol>
 			 
@@ -84,6 +84,9 @@ Angular 2+ interview Q/A
 ###  Typescript
 
 <ol>
+	<li><a href="#q-what-are-the-main-features-of-typescript">What are the main features of TypeScript?</a></li>
+	<li><a href="#q-what-are-the-benefits-of-using-typescript">What are the benefits of using TypeScript?</a></li>
+	<li><a href="#q-what-are-the-built-in-data-types-of-typescript">What are the built-in data types of TypeScript?</a></li>
 	<li><a href="#q-4-oop-principles-in-typescript">4 OOP principles in Typescript</a></li>
 </ol>
 
@@ -233,17 +236,32 @@ Angular 2+ interview Q/A
 
 ###  Angular Forms
 
-|Sl.No|  Questions                                                                      |
-|-----|---------------------------------------------------------------------------------|
-| 01. |[What the importance of Dirty Flag, pristine, touched, untouched, valid, invalid?](#q-what-the-importance-of-dirty-flag-pristine-touched-untouched-valid-invalid)|
-| 02. |[What is the difference between formControlName and FormControl?](#q-what-is-the-difference-between-formcontrolname-and-formcontrol)|
-| 03. |[When do you use template driven vs model driven forms? Why?](#q-when-do-you-use-template-driven-vs-model-driven-forms-why)|
-| 04. |[How do you submit a form?](#q-how-do-you-submit-a-form)|
-| 05. |[What is the difference between NgForm, FormGroup, and FormControl? How do they work together?](#q-what-is-the-difference-between-ngform-formgroup-and-formcontrol-how-do-they-work-together)|
-| 06. |[What is the advantage of using FormBuilder?](#q-what-s-the-advantage-of-using-formbuilder)|
-| 07. |[How do you add form validation to a form built with FormBuilder?](#q-how-do-you-add-form-validation-to-a-form-built-with-formbuilder)|
-| 08. |[What is the difference between dirty, touched, and pristine on a form element?](#q-what-is-the-difference-between-dirty-touched-and-pristine-on-a-form-element)|
-| 09. |[What is async validation and how is it done?](#q-what-is-async-validation-and-how-is-it-done)|
+|Common questions                                                                      |
+|---------------------------------------------------------------------------------|
+| [What are reactive forms?](#q-what-are-reactive-forms)|
+| [What are dynamic forms?](#q-what-are-dynamic-forms)|
+| [What are template driven forms?](#q-what-are-template-driven-forms)|
+| [What are the differences between reactive forms and template driven forms?](#q-what-are-the-differences-between-reactive-forms-and-template-driven-forms)|
+| [What are the different ways to group form controls?](#q-what-are-the-different-ways-to-group-form-controls)|
+| [How do you update specific properties of a form model?](#q-how-do-you-update-specific-properties-of-a-form-model)|
+| [How do you verify the model changes in forms?](#q-how-do-you-verify-the-model-changes-in-forms)|
+| [What are the state CSS classes provided by ngModel?](#q-what-are-the-state-css-classes-provided-by-ngmodel)|
+| [How do you reset the form?](#q-how-do-you-reset-the-form)|
+| [What the importance of Dirty Flag, pristine, touched, untouched, valid, invalid?](#q-what-the-importance-of-dirty-flag-pristine-touched-untouched-valid-invalid)|
+| [What is the difference between formControlName and FormControl?](#q-what-is-the-difference-between-formcontrolname-and-formcontrol)|
+| [How do you submit a form?](#q-how-do-you-submit-a-form)|
+| [What is the difference between NgForm, FormGroup, and FormControl? How do they work together?](#q-what-is-the-difference-between-ngform-formgroup-and-formcontrol-how-do-they-work-together)|
+| [What is the purpose of FormBuilder?](#q-what-is-the-purpose-of-formbuilder)|
+| [What is the difference between dirty, touched, and pristine on a form element?](#q-what-is-the-difference-between-dirty-touched-and-pristine-on-a-form-element)|
+| [What is Control Value Accessor?](#q-what-is-control-value-accessor)|
+
+|Validation questions                                                               |
+|---------------------------------------------------------------------------------|
+| [What are the types of validator functions?](#q-what-are-the-types-of-validator-functions)|
+| [Can you give an example of built-in validators?](#q-can-you-give-an-example-of-built-in-validators)|
+| [How do you add form validation to a form built with FormBuilder?](#q-how-do-you-add-form-validation-to-a-form-built-with-formbuilder)|
+| [What is async validation and how is it done?](#q-what-is-async-validation-and-how-is-it-done)|
+| [How do you optimize the performance of async validators?](#q-how-do-you-optimize-the-performance-of-async-validators)|
 
 **[⬆ Back to Top](#main-parts)**
 
@@ -6104,6 +6122,80 @@ You should omit the brackets when all of the following are true
 
 **[⬆ Back to Top](#main-parts)**
 		
+## Q. ***What are the main features of TypeScript?***
+<ul>
+	<li><b>Cross-Platform:</b> The TypeScript compiler can be installed on any operating system such as Windows, macOS, and Linux.</li>
+	<li><b>ES6 Features:</b> TypeScript includes most features of planned ECMAScript 2015 (ES6) such as Arrow functions.</li>
+	<li><b>Object-Oriented Language:</b> TypeScript provides all the standard OOP features like classes, interfaces, and modules.</li>
+	<li><b>Static Type-Checking:</b> TypeScript uses static typing and helps type checking at compile time. Thus, you can find compile-time errors while writing the code without running the script.</li>
+	<li><b>Optional Static Typing:</b> TypeScript also allows optional static typing in case you are used to the dynamic typing of JavaScript.</li>
+	<li><b>DOM Manipulation:</b> You can use TypeScript to manipulate the DOM for adding or removing client-side web page elements.</li>
+</ul>
+		
+**[⬆ Back to Top](#main-parts)**
+		
+## Q. ***What are the benefits of using TypeScript?***
+<ul>
+	<li>TypeScript is <b>more expressive</b>, meaning it has less syntactical clutter.</li>
+	<li>Easy debugging due to <b>advanced debugger</b> that focuses on catching logical errors before compile-time</li>
+	<li><b>Static typing</b> makes TypeScript easier to read and more structured than JavaScript’s dynamic typing.</li>
+	<li>Usable <b>across platforms</b>, in both client and server-side projects due to versatile transpiling.</li>
+</ul>
+		
+**[⬆ Back to Top](#main-parts)**
+
+## Q. ***What are the built-in data types of TypeScript?***
+<ul>
+	<li><b>String type:</b> It represents a sequence of characters stored as Unicode UTF-16 code. Strings are enclosed in single or double quotation marks.</li>
+</ul>
+		
+```ts
+let identifier: string = " ";
+```
+		
+<ul>
+	<li><b>Boolean type:</b> a logical binary switch that holds either <code>true</code> or <code>false</code></li>
+</ul>
+		
+```ts
+let identifier: boolean = <Boolean value>;
+```
+		
+<ul>
+	<li><b>Null type:</b> Null represents a variable whose value is undefined.</li>
+</ul>
+
+```ts
+let num: number = null;
+```
+
+<ul>
+	<li><b>Undefined type:</b> an undefined literal that is the starting point of all variables.</li>
+</ul>
+			
+```ts
+let num: number = undefined;
+```
+			
+<ul>
+	<li><b>Void type:</b> The type assigned to methods that have no return value.</li>
+</ul>
+
+```ts
+mockMethod(): void {};
+```
+			
+<ul>
+	<li><b>Unknown type:</b> </li>
+</ul>
+			
+```ts
+let unusable: unknown = undefined;
+```
+		
+**[⬆ Back to Top](#main-parts)**
+		
+		
 ## Q. ***4 OOP principles in Typescript***
 
 **1. Inheritance** <br>
@@ -6235,6 +6327,10 @@ bmwCar.drive();
 ```
 
 **[⬆ Back to Top](#main-parts)**
+		
+
+		
+
 
 #### Q. ***How would you create a component to display error messages throughout your application?***
 #### Q. ***What is the difference between formControlName and FormControl?***
@@ -6246,10 +6342,454 @@ bmwCar.drive();
 #### Q. ***How would you insert an embedded view from a prepared TemplateRef?***
 #### Q. ***Which components will be notified when an event is emitted?***
 #### Q. ***How would you use cached data?***
-#### Q. ***When do you use template driven vs model driven forms? Why?***
+#### Q. ***What are the differences between reactive forms and template driven forms?***
+ Below are the main differences between reactive forms and template driven forms
+
+ | Feature | Reactive | Template-Driven |
+ |---- |---- | --------- |
+ | Form model setup | Created(FormControl instance) in component explicitly | Created by directives  |
+ | Data updates | Synchronous | Asynchronous |
+ | Form custom validation | Defined as Functions | Defined as Directives |
+ | Testing | No interaction with change detection cycle | Need knowledge of the change detection process |
+ | Mutability | Immutable(by always returning new value for FormControl instance) | Mutable(Property always modified to new value) |
+ | Scalability | More scalable using low-level APIs | Less scalable using due to abstraction on APIs|
+			
+**[⬆ Back to Top](#main-parts)**
+			
+#### Q. ***What are reactive forms?***
+Reactive forms is a model-driven approach for creating forms in a reactive style(form inputs changes over time). These are built around observable streams, where form inputs and values are provided as streams of input values. Let's follow the below steps to create reactive forms, <br>
+ 1. Register the reactive forms module which declares reactive-form directives in your app
+ ```ts
+ import { ReactiveFormsModule } from '@angular/forms';
+
+ @NgModule({
+   imports: [
+	 // other imports ...
+	 ReactiveFormsModule
+   ],
+ })
+ export class AppModule { }
+ ```
+ 2. Create a new FormControl instance and save it in the component.
+ ```ts
+ import { Component } from '@angular/core';
+ import { FormControl } from '@angular/forms';
+
+ @Component({
+   selector: 'user-profile',
+   styleUrls: ['./user-profile.component.css']
+ })
+ export class UserProfileComponent {
+   userName = new FormControl('');
+ }
+ ```
+ 3. Register the FormControl in the template.
+ ```ts
+ <label>
+   User name:
+   <input type="text" [formControl]="userName">
+ </label>
+ ```
+ Finally, the component with reactive form control appears as below,
+ ```ts
+ import { Component } from '@angular/core';
+ import { FormControl } from '@angular/forms';
+
+ @Component({
+   selector: 'user-profile',
+   styleUrls: ['./user-profile.component.css']
+   template: `
+	  <label>
+		User name:
+		<input type="text" [formControl]="userName">
+	  </label>
+   `
+ })
+ export class UserProfileComponent {
+   userName = new FormControl('');
+ }
+ ```
+			
+**[⬆ Back to Top](#main-parts)**
+			
+#### Q. ***What are dynamic forms?***
+Dynamic forms is a pattern in which we build a form dynamically based on metadata that describes a business object model. You can create them based on reactive form API.
+			
+**[⬆ Back to Top](#main-parts)**
+			
+#### Q. ***What are template driven forms?***
+Template driven forms are model-driven forms where you write the logic, validations, controls etc, in the template part of the code using directives. They are suitable for simple scenarios and uses two-way binding with [(ngModel)] syntax.
+For example, you can create register form easily by following the below simple steps, <br>
+
+ 1. Import the FormsModule into the Application module's imports array
+```ts
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import {FormsModule} from '@angular/forms'
+import { RegisterComponent } from './app.component';
+@NgModule({
+  declarations: [
+	RegisterComponent,
+  ],
+  imports: [
+	BrowserModule,
+	FormsModule
+  ],
+  providers: [],
+  bootstrap: [RegisterComponent]
+})
+export class AppModule { }
+```
+2. Bind the form from template to the component using ngModel syntax
+```html
+<input 
+	type="text" 
+	class="form-control"
+	id="name"
+	required
+	[(ngModel)]="model.name"
+	name="name"
+/>
+```
+3.  Attach NgForm directive to the <form> tag in order to create FormControl instances and register them
+```ts
+<form #registerForm="ngForm">
+```
+4. Apply the validation message for form controls
+```html
+<label for="name">Name</label>
+<input 
+	type="text" 
+	class="form-control"
+	id="name"
+	required
+	[(ngModel)]="model.name"
+	name="name"
+	#name="ngModel"
+/>
+<div 
+	[hidden]="name.valid || name.pristine"
+	class="alert alert-danger"
+>
+   Please enter your name
+</div>
+```
+5. Let's submit the form with ngSubmit directive and add type="submit" button at the bottom of the form to trigger form submit.
+```html
+<form (ngSubmit)="onSubmit()" #heroForm="ngForm">
+// Form goes here
+<button type="submit" class="btn btn-success" [disabled]="!registerForm.form.valid">Submit</button>
+```
+
+Finally, the completed template-driven registration form will be appeared as follow.
+```html
+<div class="container">
+	<h1>Registration Form</h1>
+	<form (ngSubmit)="onSubmit()" #registerForm="ngForm">
+		<div class="form-group">
+			<label for="name">Name</label>
+			<input 
+				type="text"
+				class="form-control" 
+				id="name"
+				required
+				[(ngModel)]="model.name"
+				name="name"
+				#name="ngModel" 
+			/>
+		 	<div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+		   		Please enter your name
+		 	</div>
+		</div>
+		<button type="submit" class="btn btn-success" [disabled]="!registerForm.form.valid">Submit</button>
+	 </form>
+</div>
+```
+			
+**[⬆ Back to Top](#main-parts)**
+	
+#### Q. ***What are the different ways to group form controls?***
+Reactive forms provide two ways of grouping multiple related controls. <br>
+ 1. **FormGroup**: It defines a form with a fixed set of controls those can be managed together in an one object. It has same properties and methods similar to a FormControl instance. <br>
+This FormGroup can be nested to create complex forms as below.
+```ts
+import { Component } from '@angular/core';
+import { FormGroup, FormControl } from '@angular/forms';
+
+@Component({
+	selector: 'user-profile',
+	templateUrl: './user-profile.component.html',
+	styleUrls: ['./user-profile.component.css']
+})
+export class UserProfileComponent {
+	userProfile = new FormGroup({
+		firstName: new FormControl(''),
+		lastName: new FormControl(''),
+		address: new FormGroup({
+			street: new FormControl(''),
+			city: new FormControl(''),
+			state: new FormControl(''),
+			zip: new FormControl('')
+		})
+	});
+
+	onSubmit() {
+		// Store this.userProfile.value in DB
+	}
+}
+```
+```html
+<form [formGroup]="userProfile" (ngSubmit)="onSubmit()">
+	<label>
+		First Name:
+		<input type="text" formControlName="firstName">
+	</label>
+
+	<label>
+		Last Name:
+		<input type="text" formControlName="lastName">
+	</label>
+
+	<div formGroupName="address">
+		<h3>Address</h3>
+
+		<label>
+			Street:
+			<input type="text" formControlName="street">
+		</label>
+
+		<label>
+			City:
+			<input type="text" formControlName="city">
+		</label>
+
+		<label>
+			State:
+			<input type="text" formControlName="state">
+		</label>
+
+		<label>
+			Zip Code:
+			<input type="text" formControlName="zip">
+		</label>
+	</div>
+	<button type="submit" [disabled]="!userProfile.valid">Submit</button>
+</form>
+```
+2. **FormArray:** It defines a dynamic form in an array format, where you can add and remove controls at run time. This is useful for dynamic forms when you don’t know how many controls will be present within the group.
+```ts
+import { Component } from '@angular/core';
+import { FormArray, FormControl } from '@angular/forms';
+
+@Component({
+	selector: 'order-form',
+	templateUrl: './order-form.component.html',
+	styleUrls: ['./order-form.component.css']
+})
+export class OrderFormComponent {
+	constructor () {
+		this.orderForm = new FormGroup({
+			firstName: new FormControl('John', Validators.minLength(3)),
+			lastName: new FormControl('Rodson'),
+			items: new FormArray([
+				new FormControl(null)
+			])
+		});
+	}
+
+	onSubmitForm () {
+		// Save the items this.orderForm.value in DB
+	}
+
+	onAddItem () {
+		this.orderForm.controls.items.push(new FormControl(null));
+	}
+
+	onRemoveItem (index) {
+		this.orderForm.controls['items'].removeAt(index);
+	}
+}
+```
+```html
+<form [formControlName]="orderForm" (ngSubmit)="onSubmit()">
+	<label>
+		First Name:
+		<input type="text" formControlName="firstName">
+	</label>
+
+	<label>
+		Last Name:
+		<input type="text" formControlName="lastName">
+	</label>
+
+	<div>
+		<p>Add items</p>
+		<ul formArrayName="items">
+			<li *ngFor="let item of orderForm.controls.items.controls; let i = index">
+				<input type="text" formControlName="{{i}}">
+				<button type="button" title="Remove Item" (click)="onRemoveItem(i)">Remove</button>
+			</li>
+		</ul>
+		<button type="button" (click)="onAddItem">Add an item</button>
+	</div>
+</form>
+```
+			
+**[⬆ Back to Top](#main-parts)**
+	
+#### Q. ***How do you update specific properties of a form model?***
+You can use `patchValue()` method to update specific properties defined in the form model. For example,you can update the name and street of certain profile on click of the update button as shown below. <br>
+```ts
+updateProfile() {
+	this.userProfile.patchValue({
+		firstName: 'John',
+		address: {
+			street: '98 Crescent Street'
+		}
+	});
+}
+```
+```html
+<button (click)="updateProfile()">Update Profile</button>
+```
+You can also use `setValue` method to update properties. <br>
+
+**Note:** Remember to update the properties against the exact model structure.
+			
+**[⬆ Back to Top](#main-parts)**
+	
+#### Q. ***What is the purpose of FormBuilder?***
+FormBuilder is used as syntactic sugar for easily creating instances of a FormControl, FormGroup, or FormArray. This is helpful to reduce the amount of boilerplate needed to build complex reactive forms. It is available as an injectable helper class of the `@angular/forms` package. <br>
+	
+For example, the user profile component creation becomes easier as shown here. <br>
+```ts
+export class UserProfileComponent {
+	profileForm = this.formBuilder.group({
+		firstName: [''],
+		lastName: [''],
+		address: this.formBuilder.group({
+			street: [''],
+			city: [''],
+			state: [''],
+			zip: ['']
+		}),
+	});
+	
+	constructor(private formBuilder: FormBuilder) { }
+}
+```
+			
+**[⬆ Back to Top](#main-parts)**
+	
+#### Q. ***How do you verify the model changes in forms?***
+You can add a getter property(let's say, diagnostic) inside component to return a JSON representation of the model during the development. This is useful to verify whether the values are really flowing from the input box to the model and vice versa or not. <br>
+```ts
+export class UserProfileComponent {
+	model = new User('John', 29, 'Writer');
+
+	// TODO: Remove after the verification
+	get diagnostic() { return JSON.stringify(this.model); }
+}
+```
+and add `diagnostic` binding near the top of the form
+```html
+{{diagnostic}}
+<div class="form-group">
+	// FormControls goes here
+</div>
+```
+			
+**[⬆ Back to Top](#main-parts)**
+	
+#### Q. ***What are the state CSS classes provided by ngModel?***
+The ngModel directive updates the form control with special Angular CSS classes to reflect it's state. Let's find the list of classes in a tabular format, <br>
+
+| Form control state | If true | If false |
+|---- | --------- | --- |
+| Visited | ng-touched | ng-untouched |
+| Value has changed | ng-dirty	 | ng-pristine |
+| Value is valid| 	ng-valid | ng-invalid |
+			
+**[⬆ Back to Top](#main-parts)**
+	
+#### Q. ***How do you reset the form?***
+In a model-driven form, you can reset the form just by calling the function `reset()` on our form model. <br>
+For example, you can reset the form model on submission as follows, <br>
+```ts
+onSubmit() {
+	if (this.myform.valid) {
+ 		console.log("Form is submitted");
+ 		// Perform business logic here
+ 		this.myform.reset();
+	}
+}
+```
+Now, your form model resets the form back to its original pristine state.
+			
+**[⬆ Back to Top](#main-parts)**
+	
+#### Q. ***What are the types of validator functions?***
+In reactive forms, the validators can be either synchronous or asynchronous functions, <br>
+1. **Sync validators:** These are the synchronous functions which take a control instance and immediately return either a set of validation errors or null. Also, these functions passed as second argument while instantiating the form control. The main use cases are simple checks like whether a field is empty, whether it exceeds a maximum length etc.
+ 2. **Async validators:** These are the asynchronous functions which take a control instance and return a Promise or Observable that later emits a set of validation errors or null. Also, these functions passed as second argument while instantiating the form control. The main use cases are complex validations like hitting a server to check the availability of a username or email. <br>
+
+The representation of these validators looks like below <br>
+```ts
+this.myForm = formBuilder.group({
+	firstName: ['value'],
+	lastName: ['value', *Some Sync validation function*],
+	email: ['value', *Some validation function*, *Some asynchronous validation function*]
+});
+```
+			
+**[⬆ Back to Top](#main-parts)**
+	
+#### Q. ***Can you give an example of built-in validators?***
+In reactive forms, you can use built-in validator like `required` and `minlength` on your input form controls. For example, the registration form can have these validators on name input field <br>
+```ts
+this.registrationForm = new FormGroup({
+	'name': new FormControl(this.hero.name, [
+		Validators.required,
+		Validators.minLength(4),
+	])
+});
+```
+Whereas in template-driven forms, both `required` and `minlength` validators available as attributes.
+			
+**[⬆ Back to Top](#main-parts)**
+	
+#### Q. ***How do you optimize the performance of async validators?***
+Since all validators run after every form value change, it creates a major impact on performance with async validators by hitting the external API on each keystroke. This situation can be avoided by delaying the form validity by changing the updateOn property from change (default) to submit or blur. <br>
+The usage would be different based on form types,
+1. **Template-driven forms:** Set the property on `ngModelOptions` directive
+```html
+<input [(ngModel)]="name" [ngModelOptions]="{updateOn: 'blur'}">
+```
+2. **Reactive-forms:** Set the property on FormControl instance
+```ts
+name = new FormControl('', {updateOn: 'blur'});
+```
+			
+**[⬆ Back to Top](#main-parts)**
+	
+#### Q. ***What is Control Value Accessor?***
+Control Value Accessor is an interface that provides us the power to leverage the Angular forms API and create a communication between Angular Form API and the DOM element. It provides us many facilities in angular like we can create custom controls or custom component with the help of control value accessor interface.
+<br>
+In Angular, all standard elements implements the ControlValueAccessor class by default.
+			
+**[⬆ Back to Top](#main-parts)**
+
+#### Q. ***What are the different ways to group form controls?***
+TEST
+			
+**[⬆ Back to Top](#main-parts)**
+
+
+
+
 #### Q. ***How do you submit a form?***
 #### Q. ***What is the difference between NgForm, FormGroup, and FormControl? How do they work together?***
-#### Q. ***What is the advantage of using FormBuilder?***
+
 #### Q. ***How do you add form validation to a form built with FormBuilder?***
 #### Q. ***What is the difference between dirty, touched, and pristine on a form element?***
 #### Q. ***How can you access validation errors in the template to display error messages?***
