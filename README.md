@@ -6901,7 +6901,8 @@ name = new FormControl('', {updateOn: 'blur'});
 #### Q. ***What is Control Value Accessor?***
 Control Value Accessor is an interface that provides us the power to leverage the Angular forms API and create a communication between Angular Form API and the DOM element. It provides us many facilities in angular like we can create custom controls or custom component with the help of control value accessor interface.
 <br>
-In Angular, all standard elements implements the ControlValueAccessor class by default.
+In Angular, all standard elements implements the ControlValueAccessor class by default. As a result they have two-way data binding with the form. Any component implementing the ControlValueAccessor class can be used on the form. It will act as a regular input.
+
 			
 **[⬆ Back to Top](#main-parts)**
 
