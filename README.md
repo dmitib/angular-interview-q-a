@@ -5994,6 +5994,87 @@ ngOnInit() {
 }
 ```
 
+<h2>Only manipulate the DOM via the Renderer</h2>
+<br>
+<br>
+<b>Problem</b>
+<br>
+<br>
+According to the Angular documentation, relying on direct DOM access creates tight coupling between your application and rendering layers which will make it impossible to separate the two and deploy your application into a web worker.
+<br>
+Consequently, using jQuery, <code>document</code> object, or <code>ElementRef.nativeElement</code> is not recommended as it’s not available on other platforms such as server (for server-side rendering) or web worker.
+<br>
+In addition, permitting direct access to the DOM can make your application more vulnerable to XSS attacks.
+<br>
+<br>
+<b>Solution</b>
+<br>
+<br>
+Always try to prefer the <code>Renderer2</code> for DOM manipulations. It provides an API that can safely be used even when direct access to native elements is not supported.
+<br>  
+<ul>
+  <li><b>Bad practice</b></li>
+</ul>
+
+```typescript
+@Component({
+  ...
+  template: `
+    <textarea></textarea>
+    <my-child-component></my-child-component>
+  `
+})
+export class SomeComponent implements OnInit {
+
+  constructor(private elementRef: ElementRef) {}
+    
+  ngOnInit() {
+    this.elementRef.nativeElement.style.backgroundColor = '#fff';
+    this.elementRef.nativeElement.style.display = 'inline';
+    const textareaElement = document.querySelector('textarea');
+    const myChildComponent = $('my-child-component');
+  }
+}
+```
+
+We can refactor this by using a combination of <code>ElementRef</code> and <code>Renderer2</code>.
+<br>  
+<ul>
+  <li><b>Good practice</b></li>
+</ul>
+
+```typescript
+import { MyChildComponent } from './my-child.component';
+
+@Component({
+  ...
+  template: `
+    <textarea #textareaRef></textarea>
+    <my-child-component></my-child-component>
+  `
+})
+export class SomeComponent implements OnInit {
+
+  @ViewChild('textareaRef') myTextAreaRef: ElementRef;
+  @ViewChild(MyChildComponent) myChildComponentRef: MyChildComponent;
+
+  constructor(private elementRef: ElementRef, private renderer: Renderer2) {}
+    
+  ngOnInit() {
+    this.renderer.setStyle(this.elementRef.nativeElement, 'backgroundColor', '#fff');
+    this.renderer.setStyle(this.elementRef.nativeElement, 'display', 'inline');
+    const textareaElement = this.myTextAreaRef.nativeElement;
+    const myComponent = this.myChildComponent;
+  }
+}
+```
+
+<b>Resources:</b>
+<br>
+<a href="https://angular.io/api/core/ElementRef#description" target="_blank">Angular Documentation for ElementRef</a>
+<br>
+<a href="https://indepth.dev/posts/1052/exploring-angular-dom-manipulation-techniques-using-viewcontainerref" target="_blank">Exploring Angular DOM manipulation techniques using ViewContainerRef</a> by Max Koretskyi
+
 **[⬆ Back to Top](#main-parts)**
 
 ## Q. ***What does lean component mean to you?***
